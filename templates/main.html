@@ -11,5 +11,13 @@
     <div style="text-align: center">
         <img src="{{ url_for('static', filename='uploads/chair.jpg') }}" style="width: 100%, height= auto"/>
     </div>
+    <table border=1>
+        {% for key, item in result.items() %}
+        <tr>
+            <th> {{ key }}</th>
+            <th> {{ item }}</th>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
