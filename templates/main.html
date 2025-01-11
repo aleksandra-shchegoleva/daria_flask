@@ -6,16 +6,11 @@
     <title>Minimal Flask App</title>
 </head>
 <body>
-    <h1>Привет!!</h1>
-    <p>Это наш сайт</p>
-    <div style="text-align: center">
-        <img src="{{ url_for('static', filename='uploads/chair.jpg') }}" style="width: 100%, height= auto"/>
-    </div>
     <table border=1>
-        {% for key, item in result.items() %}
+        {% for product in products %}
         <tr>
-            <th> {{ key }}</th>
-            <th> {{ item }}</th>
+            <th> {{ product.name }}</th>
+            <th> {{ product.price }}</th>
         </tr>
         {% endfor %}
     </table>
